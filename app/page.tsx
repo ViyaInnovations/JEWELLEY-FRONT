@@ -7,6 +7,8 @@ import CTASection from "./components/home/CTASection";
 import FeaturedCollections from "./components/home/FeaturedCollections";
 import Testimonials from "./components/home/Testimonials";
 import Jewellery from "./components/home/Jewellery";
+import ProductCard from "./components/shop/ProductCard";
+import ProductGrid from "./components/shop/ProdcutGrid";
 
 export default function Home() {
   return (
@@ -22,6 +24,8 @@ export default function Home() {
 
 <Category />               
  {/* // Allow user to filter/explore by type */}
+
+<ProductGrid/>
 
 <Jewellery />               
 {/* // Gold/Diamond card showcase */}
