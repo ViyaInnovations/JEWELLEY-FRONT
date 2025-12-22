@@ -11,44 +11,58 @@ const categories = [
   { name: "Rings", slug: "rings", image: "/images/category/Bracelets.png" },
   { name: "Necklaces", slug: "necklaces", image: "/images/category/chains.jpg" },
   { name: "Bracelets", slug: "bracelets", image: "/images/category/Bracelets.png" },
-  { name: "Gold Ring", slug: "earrings", image: "/images/category/Gold-Ring.jpg" },
+  { name: "Gold Ring", slug: "gold-ring", image: "/images/category/Gold-Ring.jpg" },
   { name: "Nose Pins", slug: "nose-pins", image: "/images/category/Nose Pins.jpg" },
   { name: "Anklets", slug: "anklets", image: "/images/category/anklets.jpg" },
-   { name: "Bangles", slug: "earrings", image: "/images/category/Bangles.jpg" },
-  { name: "Earrings", slug: "nose-pins", image: "/images/category/Nose Pins.jpg" },
-  { name: "Necklac", slug: "anklets", image: "/images/category/Necklac.jpg" },
+  { name: "Bangles", slug: "bangles", image: "/images/category/Bangles.jpg" },
+  // { name: "Earrings", slug: "earrings", image: "/images/category/Earrings.jpg" },
+  { name: "Necklace", slug: "necklace", image: "/images/category/Necklac.jpg" },
 ];
 
-// duplicate for infinite loop
 const sliderItems = [...categories, ...categories];
 
 export default function Category() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
 
-  // auto slide every 4 seconds
+  // AUTO SLIDE
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => prev + 1);
-      setIsAnimating(true);
+      handleNext();
     }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
-  // reset index silently when reaching midpoint
+  // RESET LOOP
   useEffect(() => {
     if (currentIndex === categories.length) {
-      // wait for animation to finish
       setTimeout(() => {
-        setIsAnimating(false); // disable animation
-        setCurrentIndex(0);    // jump back silently
-      }, 800); // must match animation duration
+        setIsAnimating(false);
+        setCurrentIndex(0);
+      }, 800);
+    }
+
+    if (currentIndex < 0) {
+      setIsAnimating(false);
+      setCurrentIndex(categories.length - 1);
     }
   }, [currentIndex]);
 
+  // NEXT
+  const handleNext = () => {
+    setIsAnimating(true);
+    setCurrentIndex((prev) => prev + 1);
+  };
+
+  // PREV
+  const handlePrev = () => {
+    setIsAnimating(true);
+    setCurrentIndex((prev) => prev - 1);
+  };
+
   return (
-    <section className="relative bg-[var(--color-secondary-dark)] text-white overflow-hidden">
+    <section className="relative bg-secondary-dark text-white overflow-hidden">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 pt-20 pb-10 text-center">
         <h1 className="text-4xl md:text-5xl font-serif tracking-wide">
@@ -61,6 +75,21 @@ export default function Category() {
 
       {/* Slider */}
       <div className="relative overflow-hidden pb-20">
+        {/* Controls */}
+        <button
+          onClick={handlePrev}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/70 p-3 rounded-full"
+        >
+          ‹
+        </button>
+
+        <button
+          onClick={handleNext}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/70 p-3 rounded-full"
+        >
+          ›
+        </button>
+
         <motion.div
           className="flex gap-6 px-6"
           animate={{ x: -currentIndex * ITEM_WIDTH }}
@@ -74,7 +103,7 @@ export default function Category() {
             <Link
               key={index}
               href={`/products?category=${category.slug}`}
-              className="relative min-w-[240px] h-40 rounded-xl overflow-hidden border border-white/10 group"
+              className="relative min-w-60 h-40 rounded-xl overflow-hidden border border-white/10 group"
             >
               <Image
                 src={category.image}
@@ -83,10 +112,8 @@ export default function Category() {
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
-              {/* Overlay */}
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition" />
 
-              {/* Text */}
               <div className="absolute inset-0 flex items-end justify-center p-4">
                 <span className="text-sm uppercase tracking-wider">
                   {category.name}
