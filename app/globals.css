@@ -22,4 +22,29 @@
   
   --color-success: #86a889;
   --color-error: #c67b7b;
+ --color-linear-gold: #fcd34c;
+
 }
+
+@keyframes goldRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.gold-shine {
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #d4af37,
+    #f5e4d3,
+    #d4af37,
+    transparent
+  );
+  animation: goldRotate 6s linear infinite;
+}
+
+

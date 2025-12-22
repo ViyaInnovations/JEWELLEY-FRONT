@@ -8,6 +8,8 @@ import FeaturedCollections from "./components/home/FeaturedCollections";
 import Testimonials from "./components/home/Testimonials";
 import Jewellery from "./components/home/Jewellery";
 
+import ProductGrid from "./components/home/ProdcutGrid";
+
 export default function Home() {
   return (
   <>
@@ -22,6 +24,8 @@ export default function Home() {
 
 <Category />               
  {/* // Allow user to filter/explore by type */}
+
+<ProductGrid/>
 
 <Jewellery />               
 {/* // Gold/Diamond card showcase */}

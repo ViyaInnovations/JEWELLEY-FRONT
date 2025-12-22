@@ -1,8 +1,9 @@
 [
   {
+    
     "slug": "classic-gold-ring",
     "name": "Classic Gold Ring",
-    "category": "Ring",
+    "category": "RINGS",
 
     "images": [
       "/images/products/classic-gold-ring-1.jpg",
@@ -75,5 +76,39 @@
 
     "sku": "NCK-BRD-009",
     "createdAt": "2025-02-02"
+  }, {
+    
+    "slug": "classic-gold-ring2",
+    "name": "Classic Gold Ring2",
+    "category": "RINGS",
+
+    "images": [
+      "/images/products/classic-gold-ring-1.jpg",
+      "/images/products/classic-gold-ring-2.jpg"
+    ],
+
+    "price": 48000,
+
+    "metal": {
+      "type": "Gold",
+      "purity": "22K",
+      "weight": 6.8,
+      "finish": "Glossy"
+    },
+
+    "certified": true,
+    "certificationDetails": "BIS Hallmark Certified Gold",
+
+    "shortDescription": "A timeless 22K gold ring designed for everyday elegance.",
+    "description": "This classic gold ring is handcrafted using certified 22K gold, offering durability and timeless appeal for daily wear.",
+
+    "occasion": ["Daily Wear", "Party Wear"],
+    "gender": ["Women"],
+
+    "customizable": true,
+    "madeToOrder": false,
+
+    "sku": "RNG-GLD-001",
+    "createdAt": "2025-01-10"
   }
 ]

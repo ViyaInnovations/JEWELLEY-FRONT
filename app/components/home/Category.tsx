@@ -102,7 +102,7 @@ export default function Category() {
           {sliderItems.map((category, index) => (
             <Link
               key={index}
-              href={`/products?category=${category.slug}`}
+              href={`/shop?category=${category.slug.toUpperCase()}`}
               className="relative min-w-60 h-40 rounded-xl overflow-hidden border border-white/10 group"
             >
               <Image
