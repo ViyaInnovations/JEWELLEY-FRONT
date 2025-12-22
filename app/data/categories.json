@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ring",
+    "name": "Rings",
+    "description": "Explore our collection of handcrafted rings designed for elegance and everyday wear.",
+    "seo": {
+      "title": "Gold & Diamond Rings Collection",
+      "description": "Discover premium gold and diamond rings crafted with certified purity."
+    }
+  },
+  {
+    "id": "necklace",
+    "name": "Necklaces",
+    "description": "Traditional and modern necklace designs perfect for weddings and special occasions.",
+    "seo": {
+      "title": "Gold Necklace Designs | Bridal & Traditional",
+      "description": "Browse handcrafted gold necklace designs for weddings and festive occasions."
+    }
+  },
+  {
+    "id": "bangle",
+    "name": "Bangles",
+    "description": "Traditional gold bangles crafted with timeless designs.",
+    "seo": {
+      "title": "Gold Bangles Designs | Traditional Jewellery",
+      "description": "Shop traditional gold bangles with certified purity."
+    }
+  },
+  {
+    "id": "earring",
+    "name": "Earrings",
+    "description": "Elegant earrings ranging from daily wear to bridal collections.",
+    "seo": {
+      "title": "Gold & Diamond Earrings Collection",
+      "description": "Explore premium earrings for daily and festive wear."
+    }
+  }
+]
