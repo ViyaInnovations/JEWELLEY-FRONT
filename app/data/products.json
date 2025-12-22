@@ -1,14 +1,47 @@
 [
   {
+    "slug": "classic-gold-ring",
+    "name": "Classic Gold Ring",
+    "jewelleryType": "Ring",
+    "category": "ring",
+
+    "images": [
+      "/images/products/classic-gold-ring-1.jpg",
+      "/images/products/classic-gold-ring-2.jpg"
+    ],
+
+    "price": 48000,
+
+    "metal": {
+      "type": "Gold",
+      "purity": "22K",
+      "weight": 6.8,
+      "finish": "Glossy"
+    },
+
+    "certified": true,
+    "certificationDetails": "BIS Hallmark Certified Gold",
+
+    "shortDescription": "A timeless 22K gold ring designed for everyday elegance.",
+    "description": "This classic gold ring is handcrafted using certified 22K gold, offering durability and timeless appeal for daily wear.",
+
+    "occasion": ["Daily Wear", "Party Wear"],
+    "gender": ["Women"],
+
+    "customizable": true,
+    "madeToOrder": false,
+
+    "sku": "RNG-GLD-001",
+    "createdAt": "2025-01-10"
+  },
+  {
     "slug": "royal-bridal-gold-necklace",
     "name": "Royal Bridal Gold Necklace",
     "jewelleryType": "Necklace",
-    "category": "bridal-jewellery",
-    "collection": "royal-bridal",
+    "category": "necklace",
 
     "images": [
-      "/images/products/royal-bridal-necklace-1.jpg",
-      "/images/products/royal-bridal-necklace-2.jpg"
+      "/images/products/royal-bridal-necklace-1.jpg"
     ],
 
     "price": null,
@@ -33,8 +66,8 @@
     "certified": true,
     "certificationDetails": "BIS Hallmark Certified Gold Jewellery",
 
-    "shortDescription": "An elegant handcrafted bridal necklace designed for weddings and grand occasions.",
-    "description": "This royal bridal gold necklace is meticulously handcrafted using certified 22K gold and embellished with premium diamonds. Perfect for weddings and traditional ceremonies.",
+    "shortDescription": "An elegant handcrafted bridal necklace designed for weddings.",
+    "description": "This royal bridal necklace is handcrafted using certified 22K gold and premium diamonds, ideal for weddings and grand occasions.",
 
     "occasion": ["Bridal", "Wedding"],
     "gender": ["Women"],
@@ -42,52 +75,7 @@
     "customizable": true,
     "madeToOrder": true,
 
-    "sku": "RB-GN-001",
-    "createdAt": "2025-01-15"
-  },
-  {
-    "slug": "classic-diamond-stud-earrings",
-    "name": "Classic Diamond Stud Earrings",
-    "jewelleryType": "Earring",
-    "category": "diamond-jewellery",
-    "collection": "classic-elegance",
-
-    "images": [
-      "/images/products/diamond-stud-earrings-1.jpg"
-    ],
-
-    "price": 65000,
-
-    "metal": {
-      "type": "Gold",
-      "purity": "18K",
-      "weight": 6.2,
-      "finish": "Polished"
-    },
-
-    "stones": [
-      {
-        "type": "Diamond",
-        "count": 2,
-        "carat": 0.5,
-        "color": "FG",
-        "clarity": "VVS"
-      }
-    ],
-
-    "certified": true,
-    "certificationDetails": "IGI Certified Diamonds",
-
-    "shortDescription": "Minimal diamond studs suitable for everyday elegance.",
-    "description": "Classic diamond stud earrings crafted in 18K gold with certified diamonds, ideal for daily wear and gifting.",
-
-    "occasion": ["Daily Wear", "Party Wear"],
-    "gender": ["Women"],
-
-    "customizable": false,
-    "madeToOrder": false,
-
-    "sku": "CE-DE-014",
-    "createdAt": "2025-02-05"
+    "sku": "NCK-BRD-009",
+    "createdAt": "2025-02-02"
   }
 ]

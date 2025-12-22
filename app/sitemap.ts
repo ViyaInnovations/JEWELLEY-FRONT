@@ -1,12 +1,12 @@
 import { MetadataRoute } from "next";
 
-import products from "@/data/products.json";
-import categories from "@/data/categories.json";
-import jewelleryTypes from "@/data/jewellery-types.json";
+import products from "./data/products.json";
+import categories from "./data/categories.json";
 
 const BASE_URL = "https://www.yourdomain.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Static pages
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}/`,
@@ -30,18 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // Category pages (use category.id)
   const categoryPages: MetadataRoute.Sitemap = categories.map((category) => ({
-    url: `${BASE_URL}/category/${category.slug}`,
+    url: `${BASE_URL}/category/${category.id}`,
     lastModified: new Date(),
     priority: 0.9,
   }));
 
-  const jewelleryTypePages: MetadataRoute.Sitemap = jewelleryTypes.map((type) => ({
-    url: `${BASE_URL}/type/${type.slug}`,
-    lastModified: new Date(),
-    priority: 0.8,
-  }));
-
+  // Product pages
   const productPages: MetadataRoute.Sitemap = products.map((product) => ({
     url: `${BASE_URL}/product/${product.slug}`,
     lastModified: product.createdAt
@@ -53,7 +49,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...categoryPages,
-    ...jewelleryTypePages,
     ...productPages,
   ];
 }
