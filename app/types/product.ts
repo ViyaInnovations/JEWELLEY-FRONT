@@ -5,9 +5,8 @@ export interface Product {
   slug: string;
 
   name: string;
-  jewelleryType: JewelleryType;
-  category: string;
-  collection?: string;
+  category: category;
+
 
   images: string[];
 
@@ -30,15 +29,13 @@ export interface Product {
 
   customizable?: boolean;
   madeToOrder?: boolean;
-
- 
   sku?: string;
   createdAt?: string;
 }
 
 /* ---------------- ENUM / UNION TYPES ---------------- */
 
-export type JewelleryType =
+export type category =
   | "Ring"
   | "Necklace"
   | "Earring"

@@ -2,8 +2,7 @@
   {
     "slug": "classic-gold-ring",
     "name": "Classic Gold Ring",
-    "jewelleryType": "Ring",
-    "category": "ring",
+    "category": "Ring",
 
     "images": [
       "/images/products/classic-gold-ring-1.jpg",
@@ -37,8 +36,7 @@
   {
     "slug": "royal-bridal-gold-necklace",
     "name": "Royal Bridal Gold Necklace",
-    "jewelleryType": "Necklace",
-    "category": "necklace",
+    "category": "Necklace",
 
     "images": [
       "/images/products/royal-bridal-necklace-1.jpg"
