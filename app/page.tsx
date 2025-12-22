@@ -7,8 +7,8 @@ import CTASection from "./components/home/CTASection";
 import FeaturedCollections from "./components/home/FeaturedCollections";
 import Testimonials from "./components/home/Testimonials";
 import Jewellery from "./components/home/Jewellery";
-import ProductCard from "./components/shop/ProductCard";
-import ProductGrid from "./components/shop/ProdcutGrid";
+
+import ProductGrid from "./components/home/ProdcutGrid";
 
 export default function Home() {
   return (

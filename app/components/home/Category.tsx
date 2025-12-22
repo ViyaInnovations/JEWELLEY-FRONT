@@ -48,7 +48,7 @@ export default function Category() {
   }, [currentIndex]);
 
   return (
-    <section className="relative bg-[var(--color-secondary-dark)] text-white overflow-hidden">
+    <section className="relative bg-secondary-dark text-white overflow-hidden">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 pt-20 pb-10 text-center">
         <h1 className="text-4xl md:text-5xl font-serif tracking-wide">
@@ -73,8 +73,8 @@ export default function Category() {
           {sliderItems.map((category, index) => (
             <Link
               key={index}
-              href={`/products?category=${category.slug}`}
-              className="relative min-w-[240px] h-40 rounded-xl overflow-hidden border border-white/10 group"
+              href={`/shop?category=${category.slug.toUpperCase()}`}
+              className="relative min-w-60 h-40 rounded-xl overflow-hidden border border-white/10 group"
             >
               <Image
                 src={category.image}
