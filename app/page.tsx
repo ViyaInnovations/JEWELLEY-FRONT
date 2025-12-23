@@ -37,10 +37,10 @@ export default function Home() {
 <AboutSection />           
  {/* // Brand story, trust, team */}
 
-<Testimonials />           
+{/* <Testimonials />            */}
  {/* // Social proof */}
 
-<CTASection />              
+{/* <CTASection />               */}
 {/* // Conversion / newsletter / shop now */}
 
 
