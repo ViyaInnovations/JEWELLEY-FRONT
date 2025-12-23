@@ -11,12 +11,22 @@ const slides = [
     subtitle: "Designed to Last",
   },
   {
-    image: "/images/category/Rings.jpg",
+    image: "/images/category/Gold-Ring.jpg",
     title: "Timeless Elegance",
     subtitle: "For Every Moment",
   },
   {
-    image: "/images/category/Necklace.jpg",
+    image: "/images/category/Necklac.jpg",
+    title: "Luxury That Speaks",
+    subtitle: "Without Words",
+  },
+  {
+    image: "/images/category/Nose Pins.jpg",
+    title: "Luxury That Speaks",
+    subtitle: "Without Words",
+  },
+  {
+    image: "/images/category/Necklac.jpg",
     title: "Luxury That Speaks",
     subtitle: "Without Words",
   },
@@ -55,7 +65,7 @@ export default function Hero() {
             alt="Luxury Jewellery"
             fill
             priority
-            className="object-cover"
+            className="object-container"
           />
           <div className="absolute inset-0 bg-black/50" />
 
@@ -63,7 +73,7 @@ export default function Hero() {
           <div className="relative z-10 max-w-7xl mx-auto px-6 flex items-center min-h-[90vh]">
             <div className="max-w-2xl">
               <p className="uppercase tracking-[0.3em] text-sm text-gray-300 mb-4">
-                Larix Jewellery
+                Larix gold & diamonds
               </p>
 
               <h1 className="text-4xl md:text-6xl font-serif leading-tight mb-6">
