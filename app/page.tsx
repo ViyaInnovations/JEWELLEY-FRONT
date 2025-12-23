@@ -1,6 +1,6 @@
 import Image from "next/image";
 import HomeSection from "./components/home/HomeSection";
-import Hero from "./components/home/Hero";
+// import Hero from "./components/home/Hero";
 import AboutSection from "./components/home/AboutSection";
 import Category from "./components/home/Category";
 import CTASection from "./components/home/CTASection";
@@ -9,7 +9,7 @@ import Testimonials from "./components/home/Testimonials";
 import Jewellery from "./components/home/Jewellery";
 
 import ProductGrid from "./components/home/ProdcutGrid";
-import ContactSection from "./components/home/ContactSection";
+// import ContactSection from "./components/home/ContactSection";
 
 export default function Home() {
   return (
@@ -17,31 +17,31 @@ export default function Home() {
    {/* <HomeSection/> */}
 
 
-   <Hero />                 
+   {/* <Hero />                  */}
      {/* // Eye-catching first impression */}
 
 
 
-<Category />               
+{/* <Category />                */}
  {/* // Allow user to filter/explore by type */}
 
 
-<FeaturedCollections />   
+{/* <FeaturedCollections />    */}
  {/* // Latest or premium collections */}
 
  
-<ProductGrid/>
+{/* <ProductGrid/> */}
 
-<Jewellery />               
+{/* <Jewellery />                */}
 {/* // Gold/Diamond card showcase */}
 
-<AboutSection />           
+{/* <AboutSection />            */}
  {/* // Brand story, trust, team */}
 
 {/* <Testimonials />            */}
  {/* // Social proof */}
 
- <ContactSection/>
+ {/* <ContactSection/> */}
  {/* // contact section */}
 
    </>
