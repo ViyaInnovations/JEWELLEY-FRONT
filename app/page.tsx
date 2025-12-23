@@ -9,7 +9,7 @@ import Testimonials from "./components/home/Testimonials";
 import Jewellery from "./components/home/Jewellery";
 
 import ProductGrid from "./components/home/ProdcutGrid";
-import Contact from "./contact/page";
+import Contact from "./components/home/Contact";
 
 export default function Home() {
   return (
