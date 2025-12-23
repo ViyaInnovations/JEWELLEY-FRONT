@@ -19,12 +19,16 @@ export default function Home() {
    <Hero />                 
      {/* // Eye-catching first impression */}
 
-<FeaturedCollections />   
- {/* // Latest or premium collections */}
+
 
 <Category />               
  {/* // Allow user to filter/explore by type */}
 
+
+<FeaturedCollections />   
+ {/* // Latest or premium collections */}
+
+ 
 <ProductGrid/>
 
 <Jewellery />               
