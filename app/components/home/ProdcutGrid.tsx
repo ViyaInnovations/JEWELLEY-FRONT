@@ -1,15 +1,13 @@
-"use client";
-
-import { useSearchParams } from "next/navigation";
 import products from "../../data/products.json";
 import ProductCard from "./ProductCard";
 import type { Product } from "../../types/product";
 
-export default function ProductGrid() {
-  const searchParams = useSearchParams();
-  const category = searchParams.get("category");
+type Props = {
+  category?: string | null;
+};
 
-  const filteredProducts = category
+export default function ProductGrid({ category }: Props) {
+  const filteredProducts: Product[] = category
     ? (products as Product[]).filter(
         (product) => product.category === category
       )
