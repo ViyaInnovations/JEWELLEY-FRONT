@@ -22,7 +22,7 @@ export default function Home() {
 
 
 
-{/* <Category />                */}
+<Category />               
  {/* // Allow user to filter/explore by type */}
 
 
