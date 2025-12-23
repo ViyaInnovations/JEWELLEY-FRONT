@@ -6,8 +6,8 @@
     "category": "RINGS",
 
     "images": [
-      "/images/products/classic-gold-ring-1.jpg",
-      "/images/products/classic-gold-ring-2.jpg"
+      "/images/products/Gold-Ring.jpg",
+      "/images/products/Necklac.jpg"
     ],
 
     "price": 48000,
@@ -40,7 +40,7 @@
     "category": "Necklace",
 
     "images": [
-      "/images/products/royal-bridal-necklace-1.jpg"
+      "/images/products/Necklac.jpg"
     ],
 
     "price": null,
