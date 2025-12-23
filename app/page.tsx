@@ -1,6 +1,6 @@
 import Image from "next/image";
 import HomeSection from "./components/home/HomeSection";
-import Hero from "./components/home/Hero";
+// import Hero from "./components/home/Hero";
 import AboutSection from "./components/home/AboutSection";
 import Category from "./components/home/Category";
 import CTASection from "./components/home/CTASection";
@@ -17,7 +17,7 @@ export default function Home() {
    {/* <HomeSection/> */}
 
 
-   <Hero />                 
+   {/* <Hero />                  */}
      {/* // Eye-catching first impression */}
 
 
