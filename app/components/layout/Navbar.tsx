@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { Menu, X, Search, Heart, ShoppingBag, User } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,7 @@ export default function Navbar() {
     { name: 'Collections', href: '#collections' },
     { name: 'New Arrivals', href: '#new' },
     { name: 'About', href: '#about' },
-    // { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -18,14 +19,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
 
           {/* Logo */}
+         <Link href={'/'}>
           <div className="shrink-0">
             <img
-  src="/logo.png"
-  alt="Larix Gold & Diamonds"
-  className="h-12 md:h-16 w-auto object-contain"
-/>
+              src="/logo.png"
+              alt="Larix Gold & Diamonds"
+              className="h-12 md:h-16 w-auto object-contain"
+            />
 
           </div>
+         </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
