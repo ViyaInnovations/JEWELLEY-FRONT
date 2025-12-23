@@ -9,6 +9,7 @@ import Testimonials from "./components/home/Testimonials";
 import Jewellery from "./components/home/Jewellery";
 
 import ProductGrid from "./components/home/ProdcutGrid";
+import Contact from "./contact/page";
 
 export default function Home() {
   return (
@@ -36,9 +37,8 @@ export default function Home() {
 <Testimonials />           
  {/* // Social proof */}
 
-<CTASection />              
-{/* // Conversion / newsletter / shop now */}
-
+ <Contact/>
+ {/* // contact section */}
 
    </>
 

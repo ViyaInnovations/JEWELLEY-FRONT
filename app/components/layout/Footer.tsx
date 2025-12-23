@@ -28,9 +28,9 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="mailto:Larixgoldkdly@gmail.com" className="flex items-center gap-2 text-sm hover:text-primary transition-colors duration-200">
+              <a href="mailto:larixgoldkdly@gmail.com" className="flex items-center gap-2 text-sm hover:text-primary transition-colors duration-200">
                 <Mail size={16} />
-                <span>Larixgoldkdly@gmail.com</span>
+                <span>larixgoldkdly@gmail.com</span>
               </a>
               <a href="tel:+919645639916" className="flex items-center gap-2 text-sm hover:text-primary transition-colors duration-200">
                 <Phone size={16} />
