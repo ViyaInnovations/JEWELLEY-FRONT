@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, MapPin, Mail } from "lucide-react";
 
-export default function Contact() {
+export default function ContactSection() {
   return (
     <section className="relative w-full text-white py-7 md:py-24 overflow-hidden">
       {/* Background */}
