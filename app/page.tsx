@@ -22,20 +22,20 @@ export default function Home() {
 
 
 
-<Category />               
+{/* <Category />                */}
  {/* // Allow user to filter/explore by type */}
 
 
-<FeaturedCollections />   
+{/* <FeaturedCollections />    */}
  {/* // Latest or premium collections */}
 
  
-<ProductGrid/>
+{/* <ProductGrid/> */}
 
-<Jewellery />               
+{/* <Jewellery />                */}
 {/* // Gold/Diamond card showcase */}
 
-<AboutSection />           
+{/* <AboutSection />            */}
  {/* // Brand story, trust, team */}
 
 {/* <Testimonials />            */}
