@@ -19,7 +19,7 @@ export default function Home() {
 <FeaturedCollections />   
 
  
-{/* <ProductGrid/> */}
+<ProductGrid/>
 
 <Jewellery />               
 {/* // Gold/Diamond card showcase */}
