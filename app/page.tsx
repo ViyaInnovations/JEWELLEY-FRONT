@@ -9,7 +9,7 @@ import Testimonials from "./components/home/Testimonials";
 import Jewellery from "./components/home/Jewellery";
 
 import ProductGrid from "./components/home/ProdcutGrid";
-// import ContactSection from "./components/home/ContactSection";
+import ContactSection from "./components/home/ContactSection";
 
 export default function Home() {
   return (
@@ -41,7 +41,7 @@ export default function Home() {
 {/* <Testimonials />            */}
  {/* // Social proof */}
 
- {/* <ContactSection/> */}
+ <ContactSection/>
  {/* // contact section */}
 
    </>
