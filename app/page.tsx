@@ -20,12 +20,16 @@ export default function Home() {
    <Hero />                 
      {/* // Eye-catching first impression */}
 
-<FeaturedCollections />   
- {/* // Latest or premium collections */}
+
 
 <Category />               
  {/* // Allow user to filter/explore by type */}
 
+
+<FeaturedCollections />   
+ {/* // Latest or premium collections */}
+
+ 
 <ProductGrid/>
 
 <Jewellery />               
@@ -34,7 +38,7 @@ export default function Home() {
 <AboutSection />           
  {/* // Brand story, trust, team */}
 
-<Testimonials />           
+{/* <Testimonials />            */}
  {/* // Social proof */}
 
  <Contact/>

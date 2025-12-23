@@ -47,7 +47,7 @@ export default function AboutSection() {
             {/* Mini stats */}
             <div className="flex gap-8 pt-6 border-t border-secondary/10">
               <div>
-                <p className="text-2xl font-bold text-accent-gold">25+</p>
+                <p className="text-2xl font-bold text-accent-gold">15+</p>
                 <p className="text-sm text-secondary-light">Years Legacy</p>
               </div>
               <div>
