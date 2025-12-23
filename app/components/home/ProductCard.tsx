@@ -10,7 +10,7 @@ export default function ProductCard({ product }: Props) {
   return (
     <Link
       href={`/product/${product.slug}`}
-className="group block rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white shadow-sm hover:ring-linear-gold transition"
+      className="group block rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white shadow-sm hover:ring-linear-gold transition"
     >
       {/* Image */}
       <div className="relative aspect-square bg-neutral-100">
