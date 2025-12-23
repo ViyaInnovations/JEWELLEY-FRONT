@@ -32,7 +32,7 @@ export default function Home() {
  
 {/* <ProductGrid/> */}
 
-{/* <Jewellery />                */}
+<Jewellery />               
 {/* // Gold/Diamond card showcase */}
 
 {/* <AboutSection />            */}
