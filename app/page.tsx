@@ -3,9 +3,7 @@ import HomeSection from "./components/home/HomeSection";
 import Hero from "./components/home/Hero";
 import AboutSection from "./components/home/AboutSection";
 import Category from "./components/home/Category";
-import CTASection from "./components/home/CTASection";
 import FeaturedCollections from "./components/home/FeaturedCollections";
-import Testimonials from "./components/home/Testimonials";
 import Jewellery from "./components/home/Jewellery";
 
 import ProductGrid from "./components/home/ProdcutGrid";
@@ -35,11 +33,9 @@ export default function Home() {
 <Jewellery />               
 {/* // Gold/Diamond card showcase */}
 
-{/* <AboutSection />            */}
+<AboutSection />           
  {/* // Brand story, trust, team */}
 
-{/* <Testimonials />            */}
- {/* // Social proof */}
 
  <ContactSection/>
  {/* // contact section */}
