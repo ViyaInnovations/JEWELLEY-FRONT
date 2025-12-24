@@ -61,7 +61,7 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.8}
+          dragElastic={0}
           onDragStart={() => setIsDragging(true)}
           onDragEnd={(_, info) => {
             setIsDragging(false);
