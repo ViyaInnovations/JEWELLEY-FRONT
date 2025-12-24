@@ -66,7 +66,7 @@ export default function Category() {
   };
 
   return (
-    <section className="bg-secondary-dark text-white overflow-hidden">
+    <section id= 'category' className="bg-secondary-dark text-white overflow-hidden">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 pt-20 pb-10 text-center">
         <h2 className="text-4xl md:text-5xl font-serif">
