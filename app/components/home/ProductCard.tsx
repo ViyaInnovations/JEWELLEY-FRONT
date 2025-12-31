@@ -9,7 +9,7 @@ type Props = {
 export default function ProductCard({ product }: Props) {
   return (
     <Link
-      href={`/product/${product.slug}`}
+      href={`/products/${product.slug}`}
       className="group block rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-white shadow-sm hover:ring-linear-gold transition"
     >
       {/* Image */}
