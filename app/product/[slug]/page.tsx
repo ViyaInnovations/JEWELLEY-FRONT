@@ -1,7 +1,10 @@
+"use client"
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import products from "../../data/products.json";
 import { Product } from "../../types/product";
+import SeoProduct from "./SeoProduct";
+import SeoSchema from "./SeoSchemaProduct";
 import {
   ShieldCheck,
   Ruler,
@@ -25,6 +28,9 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-12">
+       {/* ✅ SEO Schema */}
+       <SeoProduct product={product} />
+      <SeoSchema product={products} />
       <div className="grid lg:grid-cols-2 gap-12">
         {/* LEFT: Images */}
         <div className="grid gap-4">

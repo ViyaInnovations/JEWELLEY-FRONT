@@ -8,6 +8,14 @@ import Jewellery from "./components/home/Jewellery";
 import ProductGrid from "./components/home/ProdcutGrid";
 import ContactSection from "./components/home/ContactSection";
 
+// app/page.js
+export const metadata = {
+  title: "Gold jewellery shop in Koduvally, Diamond jewellery store in Kozhikode ",
+  description:
+    "Shop hallmarked gold jewellery, diamond rings, bridal sets with secure delivery across India.",
+};
+
+
 export default function Home() {
   return (
   <>
