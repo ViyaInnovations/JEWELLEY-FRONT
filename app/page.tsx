@@ -7,6 +7,7 @@ import Jewellery from "./components/home/Jewellery";
 
 import ProductGrid from "./components/home/ProdcutGrid";
 import ContactSection from "./components/home/ContactSection";
+import AboutPage from "./about/page";
 
 // app/page.js
 export const metadata = {
@@ -20,7 +21,8 @@ export default function Home() {
   return (
   <>
    <Hero />                 
-<Category />               
+<Category /> 
+<AboutPage/>              
 
 
 <FeaturedCollections />   
@@ -39,8 +41,6 @@ export default function Home() {
  {/* // contact section */}
 
    </>
-
-
  
   );
 }
