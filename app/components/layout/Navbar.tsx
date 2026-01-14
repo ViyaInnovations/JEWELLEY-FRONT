@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { Menu, X, Search, Heart, ShoppingBag, User } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -19,18 +19,17 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
 
           {/* Logo */}
-         <Link href={'/'}>
-          <div className="shrink-0">
-            <img
-              src="/logo.png"
-              alt="Larix Gold & Diamonds"
-              className="h-12 md:h-16 w-auto object-contain"
-            />
+          <Link href={'/'}>
+            <div className="shrink-0">
+              <img
+                src="/logo.png"
+                alt="Larix Gold & Diamonds"
+                className="h-12 md:h-16 w-auto object-contain"
+              />
+            </div>
+          </Link>
 
-          </div>
-         </Link>
-
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Positioned to the Right */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
@@ -43,33 +42,8 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop Icons */}
-          <div className="hidden md:flex items-center space-x-6">
-            {/* <button className="text-secondary hover:text-primary transition-colors duration-200">
-              <Search size={20} />
-            </button> */}
-            {/* <button className="text-secondary hover:text-primary transition-colors duration-200 relative">
-              <Heart size={20} />
-              <span className="absolute -top-1 -right-1 bg-primary text-secondary text-xs rounded-full h-4 w-4 flex items-center justify-center font-semibold">
-                2
-              </span>
-            </button>
-            <button className="text-secondary hover:text-primary transition-colors duration-200 relative">
-              <ShoppingBag size={20} />
-              <span className="absolute -top-1 -right-1 bg-primary text-secondary text-xs rounded-full h-4 w-4 flex items-center justify-center font-semibold">
-                3
-              </span>
-            </button> */}
-            {/* <button className="text-secondary hover:text-primary transition-colors duration-200">
-              <User size={20} />
-            </button> */}
-          </div>
-
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
-            <button className="text-secondary">
-              <ShoppingBag size={20} />
-            </button>
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-secondary hover:text-primary transition-colors duration-200"
@@ -94,20 +68,6 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <div className="flex items-center space-x-4 pt-3 border-t border-neutral-200">
-              {/* <button className="flex-1 py-2 text-secondary hover:bg-accent-pearl rounded-lg transition-all duration-200 flex items-center justify-center gap-2">
-                <Search size={18} />
-                <span className="text-sm font-medium">Search</span>
-              </button> */}
-              {/* <button className="flex-1 py-2 text-secondary hover:bg-accent-pearl rounded-lg transition-all duration-200 flex items-center justify-center gap-2">
-                <Heart size={18} />
-                <span className="text-sm font-medium">Wishlist</span>
-              </button> */}
-              {/* <button className="flex-1 py-2 text-secondary hover:bg-accent-pearl rounded-lg transition-all duration-200 flex items-center justify-center gap-2">
-                <User size={18} />
-                <span className="text-sm font-medium">Account</span>
-              </button> */}
-            </div>
           </div>
         </div>
       )}
