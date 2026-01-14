@@ -1,54 +1,53 @@
+// app/sitemap.ts
 import { MetadataRoute } from "next";
 
 import products from "./data/products.json";
 import categories from "./data/categories.json";
 
-const BASE_URL = "https://www.yourdomain.com";
+const BASE_URL = "https://larixgoldanddiamonds.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Static pages
+  const now = new Date();
+
+  /* ---------- Static Pages ---------- */
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: `${BASE_URL}/`,
-      lastModified: new Date(),
+      url: `${BASE_URL}`,
+      lastModified: now,
       priority: 1.0,
     },
     {
       url: `${BASE_URL}/about`,
-      lastModified: new Date(),
+      lastModified: now,
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/shop`,
-      lastModified: new Date(),
+      lastModified: now,
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/contact`,
-      lastModified: new Date(),
-      priority: 0.7,
+      lastModified: now,
+      priority: 0.8,
     },
   ];
 
-  // Category pages (use category.id)
+  /* ---------- Category Pages ---------- */
   const categoryPages: MetadataRoute.Sitemap = categories.map((category) => ({
     url: `${BASE_URL}/category/${category.id}`,
-    lastModified: new Date(),
+    lastModified: now,
     priority: 0.9,
   }));
 
-  // Product pages
+  /* ---------- Product Pages ---------- */
   const productPages: MetadataRoute.Sitemap = products.map((product) => ({
     url: `${BASE_URL}/product/${product.slug}`,
     lastModified: product.createdAt
       ? new Date(product.createdAt)
-      : new Date(),
+      : now,
     priority: 0.7,
   }));
 
-  return [
-    ...staticPages,
-    ...categoryPages,
-    ...productPages,
-  ];
+  return [...staticPages, ...categoryPages, ...productPages];
 }

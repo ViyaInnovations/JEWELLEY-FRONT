@@ -15,14 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://larixgoldanddiamonds.com"),
+
   title: "Larix Gold & Diamonds | Timeless Jewellery in Koduvally, Kozhikode",
   description:
     "Larix Gold & Diamonds offers premium certified gold and diamond jewellery in Koduvally, Kozhikode. Trusted craftsmanship, custom designs, and timeless elegance since 1998.",
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-  },
+
   keywords: [
     "Larix Gold and Diamonds",
     "Gold Jewellery Kozhikode",
@@ -30,7 +28,44 @@ export const metadata: Metadata = {
     "Custom Jewellery Kerala",
     "Certified Gold Jewellery",
   ],
+
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+
+  openGraph: {
+    title: "Larix Gold & Diamonds",
+    description:
+      "Premium certified gold and diamond jewellery in Koduvally, Kozhikode since 1998.",
+    url: "https://larixgoldanddiamonds.com",
+    siteName: "Larix Gold & Diamonds",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Larix Gold & Diamonds Jewellery",
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Larix Gold & Diamonds",
+    description:
+      "Premium certified gold and diamond jewellery in Koduvally, Kozhikode.",
+    images: ["/og-image.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function RootLayout({
   children,
