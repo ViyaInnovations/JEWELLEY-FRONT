@@ -45,10 +45,10 @@ export default function Navbar() {
 
           {/* Desktop Icons */}
           <div className="hidden md:flex items-center space-x-6">
-            <button className="text-secondary hover:text-primary transition-colors duration-200">
+            {/* <button className="text-secondary hover:text-primary transition-colors duration-200">
               <Search size={20} />
-            </button>
-            <button className="text-secondary hover:text-primary transition-colors duration-200 relative">
+            </button> */}
+            {/* <button className="text-secondary hover:text-primary transition-colors duration-200 relative">
               <Heart size={20} />
               <span className="absolute -top-1 -right-1 bg-primary text-secondary text-xs rounded-full h-4 w-4 flex items-center justify-center font-semibold">
                 2
@@ -59,10 +59,10 @@ export default function Navbar() {
               <span className="absolute -top-1 -right-1 bg-primary text-secondary text-xs rounded-full h-4 w-4 flex items-center justify-center font-semibold">
                 3
               </span>
-            </button>
-            <button className="text-secondary hover:text-primary transition-colors duration-200">
+            </button> */}
+            {/* <button className="text-secondary hover:text-primary transition-colors duration-200">
               <User size={20} />
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,18 +95,18 @@ export default function Navbar() {
               </a>
             ))}
             <div className="flex items-center space-x-4 pt-3 border-t border-neutral-200">
-              <button className="flex-1 py-2 text-secondary hover:bg-accent-pearl rounded-lg transition-all duration-200 flex items-center justify-center gap-2">
+              {/* <button className="flex-1 py-2 text-secondary hover:bg-accent-pearl rounded-lg transition-all duration-200 flex items-center justify-center gap-2">
                 <Search size={18} />
                 <span className="text-sm font-medium">Search</span>
-              </button>
-              <button className="flex-1 py-2 text-secondary hover:bg-accent-pearl rounded-lg transition-all duration-200 flex items-center justify-center gap-2">
+              </button> */}
+              {/* <button className="flex-1 py-2 text-secondary hover:bg-accent-pearl rounded-lg transition-all duration-200 flex items-center justify-center gap-2">
                 <Heart size={18} />
                 <span className="text-sm font-medium">Wishlist</span>
-              </button>
-              <button className="flex-1 py-2 text-secondary hover:bg-accent-pearl rounded-lg transition-all duration-200 flex items-center justify-center gap-2">
+              </button> */}
+              {/* <button className="flex-1 py-2 text-secondary hover:bg-accent-pearl rounded-lg transition-all duration-200 flex items-center justify-center gap-2">
                 <User size={18} />
                 <span className="text-sm font-medium">Account</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
