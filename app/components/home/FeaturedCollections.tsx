@@ -27,15 +27,6 @@ export default function FeaturedCollections() {
         ))}
       </div>
 
-      {/* View All */}
-      <div className="text-center mt-12">
-        <Link
-          href="/collections"
-          className="inline-block px-8 py-3 border border-neutral-300 text-sm font-medium hover:bg-neutral-900 hover:text-white transition"
-        >
-          View All Collections
-        </Link>
-      </div>
     </section>
   );
 }
