@@ -26,10 +26,11 @@ export default function Home() {
 
       <Category />
 
-      <FeaturedCollections />
+      {/* <FeaturedCollections /> */}
 
-      <ProductGrid />
-
+<section id="collections" className="scroll-mt-20"> 
+  <ProductGrid />
+</section>
       <Jewellery />
 
       <AboutSection />

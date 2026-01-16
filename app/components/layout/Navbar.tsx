@@ -7,8 +7,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Collections', href: '#collections' },
-    { name: 'New Arrivals', href: '#new' },
+    { name: 'Collections', href: '/#collections' },
+    { name: 'New Arrivals', href: '/new' }, // Added leading slash
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -29,16 +29,16 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Navigation - Positioned to the Right */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="text-secondary hover:text-primary transition-colors duration-200 font-medium text-sm tracking-wide"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -57,16 +57,16 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-neutral-200 shadow-lg">
-          <div className="px-4 pt-2 pb-4 space-y-3">
+          <div className="px-4 pt-2 pb-4 space-y-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
-                className="block py-2 text-secondary hover:text-primary hover:bg-accent-pearl rounded-lg px-3 transition-all duration-200 font-medium"
-                onClick={() => setIsOpen(false)}
+                className="block py-2 text-secondary hover:text-primary hover:bg-neutral-50 rounded-lg px-3 transition-all duration-200 font-medium"
+                onClick={() => setIsOpen(false)} // Closes menu when link is clicked
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
