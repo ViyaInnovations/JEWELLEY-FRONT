@@ -3,7 +3,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { useState, use } from "react"; // Added use
+import { useState, use } from "react";
 import products from "../../data/products.json";
 import { Product } from "../../types/product";
 import {
@@ -19,21 +19,30 @@ type Props = {
 };
 
 export default function ProductPage({ params }: Props) {
-  // 1. Properly unwrap the params promise using React.use()
   const { slug } = use(params);
-
-  // 2. Find the product
   const product = (products as Product[]).find((p) => p.slug === slug);
-
-  // 3. Local state for image gallery
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   if (!product) notFound();
 
-  // Determine which image to show
   const currentImage = selectedImage || product.images[0];
 
-  /* ---------------- SEO & JSON-LD ---------------- */
+  // --- WhatsApp Inquiry Logic ---
+  const handleWhatsAppEnquiry = () => {
+    const phoneNumber = "919645639916";
+    const message = `Hello Larix Gold & Diamonds, I am interested in the following product:\n\n` +
+                    `*Product:* ${product.name}\n` +
+                    `*Category:* ${product.category}\n` +
+                    `*Metal:* ${product.metal.purity} ${product.metal.type}\n` +
+                    `*Weight:* ${product.metal.weight}g\n\n` +
+                    `Please provide more details regarding the price.`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, "_blank");
+  };
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -60,11 +69,11 @@ export default function ProductPage({ params }: Props) {
       </Head>
 
       <section className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* LEFT: Gallery */}
-          <div className="space-y-4">
-            <div className="relative aspect-square rounded-2xl overflow-hidden bg-neutral-100 ring-1 ring-neutral-200">
+          <div className="lg:col-span-3 space-y-4">
+            <div className="relative aspect-square rounded-2xl overflow-hidden ring-rose-200 ring-1 shadow-sm">
               <Image
                 src={currentImage}
                 alt={product.name}
@@ -76,15 +85,15 @@ export default function ProductPage({ params }: Props) {
 
             {/* Thumbnail Grid */}
             {product.images.length > 1 && (
-              <div className="grid grid-cols-5 gap-3">
+              <div className="grid grid-cols-3 gap-3">
                 {product.images.map((img, i) => (
                   <button
                     key={i}
                     onClick={() => setSelectedImage(img)}
                     className={`relative aspect-square rounded-xl overflow-hidden bg-neutral-100 ring-2 transition-all ${
                       currentImage === img 
-                        ? "ring-neutral-900 shadow-md" 
-                        : "ring-transparent hover:ring-neutral-300"
+                        ? "ring-rose-200 shadow-md" 
+                        : "ring-transparent hover:ring-rose-200"
                     }`}
                   >
                     <Image
@@ -100,7 +109,7 @@ export default function ProductPage({ params }: Props) {
           </div>
 
           {/* RIGHT: Details */}
-          <div className="space-y-8">
+          <div className="lg:col-span-7 space-y-8 lg:pl-8">
             <div>
               <h1 className="text-3xl font-semibold text-neutral-900 tracking-tight">
                 {product.name}
@@ -143,7 +152,10 @@ export default function ProductPage({ params }: Props) {
 
             {/* CTA */}
             <div className="pt-2">
-              <button className="w-full md:w-2/3 rounded-xl bg-neutral-900 px-8 py-4 text-sm font-bold text-white hover:bg-neutral-800 transition-all active:scale-95 shadow-lg shadow-neutral-200">
+              <button 
+                onClick={handleWhatsAppEnquiry}
+                className="w-full md:w-3/5 rounded-xl bg-neutral-900 px-8 py-4 text-sm font-bold text-white hover:bg-neutral-800 transition-all active:scale-95 shadow-lg shadow-neutral-200"
+              >
                 Enquire for Price
               </button>
               
@@ -156,7 +168,7 @@ export default function ProductPage({ params }: Props) {
         </div>
 
         {product.description && (
-          <div className="mt-20 max-w-3xl">
+          <div className="mt-20 max-w-4xl">
             <h2 className="text-xl font-bold text-neutral-900 mb-4 border-b pb-2">
               The Craftsmanship
             </h2>
