@@ -7,8 +7,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Collections', href: '/#collections' },
-    { name: 'New Arrivals', href: '/new' }, // Added leading slash
+    { name: 'Collections', href: '/collections' }, // Added leading slash
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];

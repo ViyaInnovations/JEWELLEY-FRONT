@@ -3,11 +3,10 @@
     
     "slug": "classic-gold-ring",
     "name": "Classic Gold Ring",
-    "category": "RINGS",
+    "category": "Ring",
 
     "images": [
-      "/images/products/Gold-Ring.jpg",
-      "/images/products/Necklac.jpg"
+      "/images/products/Ring.jpg"
     ],
 
     "price": 48000,
@@ -80,10 +79,9 @@
     
     "slug": "classic-gold-ring2",
     "name": "Classic Gold Ring2",
-    "category": "RINGS",
+    "category": "Bangle",
 
     "images": [
-      "/images/products/Necklac.jpg",
       "/images/products/Bangles.jpg"
     ],
 
