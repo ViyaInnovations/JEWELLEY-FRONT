@@ -3,7 +3,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { useState } from "react"; // Added useState
+import { useState, use } from "react"; // Added use
 import products from "../../data/products.json";
 import { Product } from "../../types/product";
 import {
@@ -19,22 +19,18 @@ type Props = {
 };
 
 export default function ProductPage({ params }: Props) {
-  // Extracting params and finding product
-  // Note: In Next.js App Router Client Components, we use React.use() or handle the promise
-  const [slug, setSlug] = useState<string | null>(null);
-  
-  // Since this is a "use client" component, we handle the params promise
-  params.then((p) => setSlug(p.slug));
+  // 1. Properly unwrap the params promise using React.use()
+  const { slug } = use(params);
 
+  // 2. Find the product
   const product = (products as Product[]).find((p) => p.slug === slug);
 
-  // Local state to track which image is currently featured
+  // 3. Local state for image gallery
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  if (!slug) return <div className="min-h-screen bg-white" />;
   if (!product) notFound();
 
-  // Set initial image if state is null
+  // Determine which image to show
   const currentImage = selectedImage || product.images[0];
 
   /* ---------------- SEO & JSON-LD ---------------- */
@@ -44,10 +40,7 @@ export default function ProductPage({ params }: Props) {
     name: product.name,
     image: product.images,
     description: product.description,
-    brand: {
-      "@type": "Brand",
-      name: "Larix Gold & Diamonds",
-    },
+    brand: { "@type": "Brand", name: "Larix Gold & Diamonds" },
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
@@ -60,8 +53,6 @@ export default function ProductPage({ params }: Props) {
       <Head>
         <title>{`${product.name} | Larix Gold & Diamonds`}</title>
         <meta name="description" content={product.description} />
-        <meta property="og:title" content={product.name} />
-        <meta property="og:image" content={product.images[0]} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
@@ -73,8 +64,7 @@ export default function ProductPage({ params }: Props) {
           
           {/* LEFT: Gallery */}
           <div className="space-y-4">
-            {/* Featured Image - Reflects Selection */}
-            <div className="relative aspect-square rounded-2xl overflow-hidden bg-neutral-100 ring-1 ring-neutral-200 shadow-inner">
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-neutral-100 ring-1 ring-neutral-200">
               <Image
                 src={currentImage}
                 alt={product.name}
@@ -126,7 +116,6 @@ export default function ProductPage({ params }: Props) {
               </p>
             )}
 
-            {/* Highlights Grid */}
             <div className="grid grid-cols-2 gap-y-6 gap-x-4 border-y border-neutral-100 py-6">
               <InfoItem
                 icon={<Gem size={20} />}
@@ -166,7 +155,6 @@ export default function ProductPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Long Description */}
         {product.description && (
           <div className="mt-20 max-w-3xl">
             <h2 className="text-xl font-bold text-neutral-900 mb-4 border-b pb-2">
