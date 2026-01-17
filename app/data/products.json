@@ -1,112 +1,117 @@
 [
-  {
-    
-    "slug": "classic-gold-ring",
-    "name": "Classic Gold Ring",
-    "category": "Ring",
+    {
+        "slug": "classic-gold-ring",
+        "name": "Classic Gold Ring",
+        "category": "Ring",
 
-    "images": [
-      "/images/products/Ring.jpg"
-    ],
+        "images": [
+            "/images/products/Ring.jpg",
+            "/images/products/ring2.jpg",
+            "/images/products/ring3.jpg",
+            "/images/products/ring4.jpg",
+            "/images/products/ring5.jpg"
+        ],
 
-    "price": 48000,
+        "price": 48000,
 
-    "metal": {
-      "type": "Gold",
-      "purity": "22K",
-      "weight": 6.8,
-      "finish": "Glossy"
+        "metal": {
+            "type": "Gold",
+            "purity": "22K",
+            "weight": 6.8,
+            "finish": "Glossy"
+        },
+
+        "certified": true,
+        "certificationDetails": "BIS Hallmark Certified Gold",
+
+        "shortDescription": "A timeless 22K gold ring designed for everyday elegance.",
+        "description": "This classic gold ring is handcrafted using certified 22K gold, offering durability and timeless appeal for daily wear.",
+
+        "occasion": ["Daily Wear", "Party Wear"],
+        "gender": ["Women"],
+
+        "customizable": true,
+        "madeToOrder": false,
+
+        "sku": "RNG-GLD-001",
+        "createdAt": "2025-01-10"
     },
+    {
+        "slug": "royal-bridal-gold-necklace",
+        "name": "Royal Bridal Gold Necklace",
+        "category": "Necklace",
 
-    "certified": true,
-    "certificationDetails": "BIS Hallmark Certified Gold",
+        "images": [
+            "/images/products/Necklac.jpg",
+            "/images/products/Necklac2.jpg",
+            "/images/products/necklac3.jpg",
+            "/images/products/necklac4.jpg",
+            "/images/products/necklac5.jpg"
+        ],
 
-    "shortDescription": "A timeless 22K gold ring designed for everyday elegance.",
-    "description": "This classic gold ring is handcrafted using certified 22K gold, offering durability and timeless appeal for daily wear.",
+        "price": null,
 
-    "occasion": ["Daily Wear", "Party Wear"],
-    "gender": ["Women"],
+        "metal": {
+            "type": "Gold",
+            "purity": "22K",
+            "weight": 45.6,
+            "finish": "Antique"
+        },
 
-    "customizable": true,
-    "madeToOrder": false,
+        "stones": [
+            {
+                "type": "Diamond",
+                "count": 36,
+                "carat": 1.2,
+                "color": "GH",
+                "clarity": "VS"
+            }
+        ],
 
-    "sku": "RNG-GLD-001",
-    "createdAt": "2025-01-10"
-  },
-  {
-    "slug": "royal-bridal-gold-necklace",
-    "name": "Royal Bridal Gold Necklace",
-    "category": "Necklace",
+        "certified": true,
+        "certificationDetails": "BIS Hallmark Certified Gold Jewellery",
 
-    "images": [
-      "/images/products/Necklac.jpg"
-    ],
+        "shortDescription": "An elegant handcrafted bridal necklace designed for weddings.",
+        "description": "This royal bridal necklace is handcrafted using certified 22K gold and premium diamonds, ideal for weddings and grand occasions.",
 
-    "price": null,
+        "occasion": ["Bridal", "Wedding"],
+        "gender": ["Women"],
 
-    "metal": {
-      "type": "Gold",
-      "purity": "22K",
-      "weight": 45.6,
-      "finish": "Antique"
+        "customizable": true,
+        "madeToOrder": true,
+
+        "sku": "NCK-BRD-009",
+        "createdAt": "2025-02-02"
     },
+    {
+        "slug": "classic-gold-ring2",
+        "name": "Classic Gold Ring2",
+        "category": "Bangle",
 
-    "stones": [
-      {
-        "type": "Diamond",
-        "count": 36,
-        "carat": 1.2,
-        "color": "GH",
-        "clarity": "VS"
-      }
-    ],
+        "images": ["/images/products/Bangles.jpg"],
 
-    "certified": true,
-    "certificationDetails": "BIS Hallmark Certified Gold Jewellery",
+        "price": 48000,
 
-    "shortDescription": "An elegant handcrafted bridal necklace designed for weddings.",
-    "description": "This royal bridal necklace is handcrafted using certified 22K gold and premium diamonds, ideal for weddings and grand occasions.",
+        "metal": {
+            "type": "Gold",
+            "purity": "22K",
+            "weight": 6.8,
+            "finish": "Glossy"
+        },
 
-    "occasion": ["Bridal", "Wedding"],
-    "gender": ["Women"],
+        "certified": true,
+        "certificationDetails": "BIS Hallmark Certified Gold",
 
-    "customizable": true,
-    "madeToOrder": true,
+        "shortDescription": "A timeless 22K gold ring designed for everyday elegance.",
+        "description": "This classic gold ring is handcrafted using certified 22K gold, offering durability and timeless appeal for daily wear.",
 
-    "sku": "NCK-BRD-009",
-    "createdAt": "2025-02-02"
-  }, {
-    
-    "slug": "classic-gold-ring2",
-    "name": "Classic Gold Ring2",
-    "category": "Bangle",
+        "occasion": ["Daily Wear", "Party Wear"],
+        "gender": ["Women"],
 
-    "images": [
-      "/images/products/Bangles.jpg"
-    ],
+        "customizable": true,
+        "madeToOrder": false,
 
-    "price": 48000,
-
-    "metal": {
-      "type": "Gold",
-      "purity": "22K",
-      "weight": 6.8,
-      "finish": "Glossy"
-    },
-
-    "certified": true,
-    "certificationDetails": "BIS Hallmark Certified Gold",
-
-    "shortDescription": "A timeless 22K gold ring designed for everyday elegance.",
-    "description": "This classic gold ring is handcrafted using certified 22K gold, offering durability and timeless appeal for daily wear.",
-
-    "occasion": ["Daily Wear", "Party Wear"],
-    "gender": ["Women"],
-
-    "customizable": true,
-    "madeToOrder": false,
-
-    "sku": "RNG-GLD-001",
-    "createdAt": "2025-01-10"
-  }
+        "sku": "RNG-GLD-001",
+        "createdAt": "2025-01-10"
+    }
 ]

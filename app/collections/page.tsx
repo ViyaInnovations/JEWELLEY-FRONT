@@ -24,9 +24,9 @@ export default function CollectionsPage() {
   return (
     <main className="bg-white min-h-screen">
       {/* Hero Header */}
-      <header className="bg-neutral-50 border-b border-neutral-100 py-16">
+      <header className="bg-neutral-50 border-b border-neutral-100 py-10">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-2">
             Our Collections
           </h1>
           <p className="text-neutral-600 max-w-2xl mx-auto text-lg">
@@ -38,7 +38,7 @@ export default function CollectionsPage() {
 
       <section className="max-w-7xl mx-auto px-4 py-12">
         {/* Category Filter Bar */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-7">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -55,16 +55,16 @@ export default function CollectionsPage() {
         </div>
 
         {/* Product Count */}
-        <div className="mb-8 flex items-center justify-between">
+        <div className="mb-5 flex items-center justify-between">
           <p className="text-sm text-neutral-500">
             Showing <span className="font-semibold text-neutral-900">{filteredProducts.length}</span> products
           </p>
-          <div className="h-px bg-neutral-100 flex-grow ml-4"></div>
+          <div className="h-px bg-neutral-100 grow ml-4"></div>
         </div>
 
         {/* Product Grid */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-10">
             {filteredProducts.map((product) => (
               <ProductCard key={product.slug} product={product} />
             ))}
